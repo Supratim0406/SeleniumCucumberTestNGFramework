@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>latestCucumberSeleniumFramework-master</td>
+              <td>1</td>
+            <td>07 Apr 2019, 12:33</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">HomePageStepDefinitions.i_click_on_leads_link()</td>
+              <td>6</td>
+              <td class="duration" data-value="73675566800">1m 13s 675ms</td>
+              <td class="duration" data-value="12279261133">12s 279ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomePageStepDefinitions.i_sould_see_administrator_text_message_on_home_Page()</td>
+              <td>4</td>
+              <td class="duration" data-value="208024800">208ms</td>
+              <td class="duration" data-value="52006200">052ms</td>
+              <td class="failed">75.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HomePageStepDefinitions.i_sould_see_application_homepage()</td>
+              <td>10</td>
+              <td class="duration" data-value="106801808200">1m 46s 801ms</td>
+              <td class="duration" data-value="10680180820">10s 680ms</td>
+              <td class="failed">90.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_click_on_Save_button()</td>
+              <td>6</td>
+              <td class="duration" data-value="35830516800">35s 830ms</td>
+              <td class="duration" data-value="5971752800">5s 971ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_click_on_leads_plus_button()</td>
+              <td>6</td>
+              <td class="duration" data-value="21787566200">21s 787ms</td>
+              <td class="duration" data-value="3631261033">3s 631ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_enetr_Website(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1174048700">1s 174ms</td>
+              <td class="duration" data-value="195674783">195ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_enter_Annual_Revenue(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="638912300">638ms</td>
+              <td class="duration" data-value="106485383">106ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_enter_Company_name(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="981905500">981ms</td>
+              <td class="duration" data-value="163650916">163ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_enter_Country(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="563208700">563ms</td>
+              <td class="duration" data-value="93868116">093ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_enter_Description(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="757744400">757ms</td>
+              <td class="duration" data-value="126290733">126ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_enter_Email(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1540938900">1s 540ms</td>
+              <td class="duration" data-value="256823150">256ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_enter_Fax(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1255643000">1s 255ms</td>
+              <td class="duration" data-value="209273833">209ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_enter_First_Name(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1624748100">1s 624ms</td>
+              <td class="duration" data-value="270791350">270ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_enter_Mobile(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="922870800">922ms</td>
+              <td class="duration" data-value="153811800">153ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_enter_No_Of_Employees(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="463803300">463ms</td>
+              <td class="duration" data-value="77300550">077ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_enter_Phone(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="856124200">856ms</td>
+              <td class="duration" data-value="142687366">142ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_enter_Postal_Code(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="647375400">647ms</td>
+              <td class="duration" data-value="107895900">107ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_enter_Secondary_Email(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1530900900">1s 530ms</td>
+              <td class="duration" data-value="255150150">255ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_enter_Street(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1139997700">1s 139ms</td>
+              <td class="duration" data-value="189999616">189ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_enter_Title(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="954585500">954ms</td>
+              <td class="duration" data-value="159097583">159ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_enter_last_name(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1181562900">1s 181ms</td>
+              <td class="duration" data-value="196927150">196ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_select_Assigned_To(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="608032900">608ms</td>
+              <td class="duration" data-value="101338816">101ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_select_First_Name_title_as(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1673536700">1s 673ms</td>
+              <td class="duration" data-value="278922783">278ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_select_Industry(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="734015700">734ms</td>
+              <td class="duration" data-value="122335950">122ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_select_Lead_Source(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="699326300">699ms</td>
+              <td class="duration" data-value="116554383">116ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_select_Lead_Status(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="885115800">885ms</td>
+              <td class="duration" data-value="147519300">147ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_should_see_lead_creation_success_message()</td>
+              <td>6</td>
+              <td class="duration" data-value="704155300">704ms</td>
+              <td class="duration" data-value="117359216">117ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LeadsPageStepDefinitions.i_should_verify_leads_information()</td>
+              <td>6</td>
+              <td class="duration" data-value="1142085300">1s 142ms</td>
+              <td class="duration" data-value="190347550">190ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ServiceHooks.endTest(Scenario)</td>
+              <td>10</td>
+              <td class="duration" data-value="17347435500">17s 347ms</td>
+              <td class="duration" data-value="1734743550">1s 734ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ServiceHooks.initializeTest()</td>
+              <td>10</td>
+              <td class="duration" data-value="56300646200">56s 300ms</td>
+              <td class="duration" data-value="5630064620">5s 630ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">loginPageStepDefinitions.click_on_login_button()</td>
+              <td>10</td>
+              <td class="duration" data-value="68376911000">1m 8s 376ms</td>
+              <td class="duration" data-value="6837691100">6s 837ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">loginPageStepDefinitions.i_am_on_the_Login_page_URL(String)</td>
+              <td>10</td>
+              <td class="duration" data-value="41025762900">41s 025ms</td>
+              <td class="duration" data-value="4102576290">4s 102ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">loginPageStepDefinitions.i_enter_password_as(String)</td>
+              <td>10</td>
+              <td class="duration" data-value="1661348700">1s 661ms</td>
+              <td class="duration" data-value="166134870">166ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">loginPageStepDefinitions.i_enter_username_as(String)</td>
+              <td>10</td>
+              <td class="duration" data-value="865245700">865ms</td>
+              <td class="duration" data-value="86524570">086ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">loginPageStepDefinitions.i_should_see_Log_In_Page()</td>
+              <td>4</td>
+              <td class="duration" data-value="115820900">115ms</td>
+              <td class="duration" data-value="28955225">028ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>35</td>
+            <td>234</td>
+            <td class="duration">7m 26s 677ms</td>
+            <td class="duration">1s 908ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
