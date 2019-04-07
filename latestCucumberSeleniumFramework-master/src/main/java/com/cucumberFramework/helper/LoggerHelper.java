@@ -4,7 +4,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 /**
  * 
- * @author Bhanu Pratap Singh
+ * @author Supratim
  *
  */
 public class LoggerHelper {

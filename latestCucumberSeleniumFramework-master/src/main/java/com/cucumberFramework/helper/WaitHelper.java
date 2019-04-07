@@ -8,9 +8,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * 
- * @author Bhanu Pratap Singh
- * https://www.udemy.com/seleniumbybhanu/
- * https://www.youtube.com/user/MrBhanupratap29/playlists
+ * @author Supratim
+ * 
  *
  */
 public class WaitHelper {
